@@ -38,7 +38,6 @@
       padding-bottom: 60px;
     }
 
-    /* HERO */
     .hero {
       background: var(--darker);
       border-bottom: 4px solid var(--orange);
@@ -76,10 +75,7 @@
       margin-bottom: 16px;
       letter-spacing: -1px;
     }
-    .hero h1 em {
-      font-style: normal;
-      color: var(--orange);
-    }
+    .hero h1 em { font-style: normal; color: var(--orange); }
     .confession {
       background: rgba(255,107,0,0.08);
       border: 1px solid rgba(255,107,0,0.3);
@@ -112,7 +108,6 @@
     }
     .hero-pill:hover { border-color: var(--orange); color: var(--orange); }
 
-    /* SECTION */
     .section {
       padding: 40px 16px 8px;
       max-width: 860px;
@@ -140,7 +135,6 @@
       margin-bottom: 24px;
     }
 
-    /* CARDS */
     .card-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -157,12 +151,7 @@
       transition: border-color .15s, transform .15s;
     }
     .card:hover { border-color: var(--orange); transform: translateY(-2px); }
-    .card-top {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 10px;
-    }
+    .card-top { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
     .card-emoji { font-size: 24px; }
     .card h3 { font-size: 15px; font-weight: 700; color: #fff; }
     .card p { font-size: 13px; color: var(--muted); line-height: 1.55; margin-bottom: 14px; }
@@ -174,11 +163,8 @@
       text-decoration: none;
       border-bottom: 1px solid rgba(255,107,0,0.3);
       padding-bottom: 1px;
-      transition: border-color .15s;
     }
-    .card-link:hover { border-color: var(--orange); }
 
-    /* AFFILIATE CARD */
     .aff-card {
       background: linear-gradient(135deg, #1a1200, #161616);
       border: 1px solid rgba(255,214,0,0.2);
@@ -187,9 +173,7 @@
       display: flex;
       gap: 14px;
       align-items: flex-start;
-      transition: border-color .15s;
     }
-    .aff-card:hover { border-color: var(--yellow); }
     .aff-badge {
       background: var(--yellow);
       color: #000;
@@ -216,7 +200,6 @@
       text-decoration: none;
     }
 
-    /* RULE BOX */
     .rule-box {
       background: var(--card2);
       border-left: 4px solid var(--orange);
@@ -229,7 +212,6 @@
     }
     .rule-box strong { color: var(--orange); font-size: 16px; }
 
-    /* TRUTH BOX */
     .truth-box {
       background: #0e0e0e;
       border: 1px solid #2a2a2a;
@@ -262,7 +244,6 @@
       font-weight: 700;
     }
 
-    /* COUNTER */
     .cost-compare {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -290,11 +271,7 @@
     .cost-good .amount { font-size: 28px; font-weight: 900; color: var(--green); }
     .cost-good p { font-size: 12px; color: #777; margin-top: 4px; }
 
-    /* CHECKLIST */
-    .checklist {
-      list-style: none;
-      margin: 16px 0;
-    }
+    .checklist { list-style: none; margin: 16px 0; }
     .checklist li {
       display: flex;
       gap: 12px;
@@ -308,17 +285,13 @@
     .checklist li .icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
     .checklist li strong { color: #fff; display: block; margin-bottom: 2px; }
 
-    /* DIVIDER */
     hr.divider {
       border: none;
       border-top: 1px solid #1e1e1e;
-      margin: 40px 16px 0;
+      margin: 40px auto 0;
       max-width: 860px;
-      margin-left: auto;
-      margin-right: auto;
     }
 
-    /* IMPULSE TIMER */
     .timer-box {
       background: var(--card2);
       border: 2px solid var(--orange);
@@ -346,12 +319,9 @@
       border-radius: 999px;
       border: none;
       cursor: pointer;
-      transition: background .15s;
     }
-    .timer-btn:hover { background: var(--orange-bright); }
     .timer-msg { margin-top: 14px; font-size: 14px; color: var(--green); font-weight: 700; display: none; }
 
-    /* NETWORK */
     .network-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -375,7 +345,6 @@
     .net-link:hover { border-color: var(--orange); color: var(--orange); }
     .net-link span { display: block; font-size: 18px; margin-bottom: 4px; }
 
-    /* SHARE */
     .share-bar {
       background: linear-gradient(135deg, #111, #0a0a0a);
       border-top: 3px solid var(--orange);
@@ -397,44 +366,54 @@
       text-decoration: none;
     }
 
-    /* PHONE COMPARE */
     .phone-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 12px;
       margin: 16px 0;
     }
-    .phone-bad, .phone-good {
-      border-radius: var(--radius);
-      padding: 16px;
-    }
-    .phone-bad {
-      background: #150000;
-      border: 1px solid rgba(255,61,61,0.25);
-    }
-    .phone-good {
-      background: #001500;
-      border: 1px solid rgba(0,200,83,0.25);
-    }
+    .phone-bad { background: #150000; border: 1px solid rgba(255,61,61,0.25); border-radius: var(--radius); padding: 16px; }
+    .phone-good { background: #001500; border: 1px solid rgba(0,200,83,0.25); border-radius: var(--radius); padding: 16px; }
     .phone-bad .ph-label { color: var(--red); font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
     .phone-good .ph-label { color: var(--green); font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
-    .phone-bad .ph-price, .phone-good .ph-price { font-size: 26px; font-weight: 900; margin-bottom: 4px; }
-    .phone-bad .ph-price { color: var(--red); }
-    .phone-good .ph-price { color: var(--green); }
+    .phone-bad .ph-price { font-size: 26px; font-weight: 900; color: var(--red); margin-bottom: 4px; }
+    .phone-good .ph-price { font-size: 26px; font-weight: 900; color: var(--green); margin-bottom: 4px; }
     .phone-bad p, .phone-good p { font-size: 12px; color: #666; line-height: 1.5; }
+
+    .tip-box {
+      background: #111f11;
+      border-left: 4px solid var(--green);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 14px 18px;
+      margin: 12px 0 20px;
+      font-size: 14px;
+      color: #ccc;
+    }
+    .tip-box strong { color: var(--green); }
+
+    /* 3AM LIST */
+    .list-plain { list-style: none; margin: 14px 0 0; padding: 0; }
+    .list-plain li {
+      padding: 8px 0;
+      border-bottom: 1px solid #1e1e1e;
+      font-size: 13px;
+      color: #ccc;
+      display: flex;
+      gap: 10px;
+    }
+    .list-plain li:last-child { border-bottom: none; }
+    .list-plain li .num { color: var(--orange); font-weight: 900; flex-shrink: 0; min-width: 20px; }
+    .list-plain li .num.dim { color: #333; }
   </style>
 </head>
 <body>
 
-<!-- HERO -->
 <div class="hero">
   <div class="hero-badge">🧠 Real Talk · No Lectures · UK</div>
   <h1>Stop Being<br><em>Broke Forever</em></h1>
-
   <div class="confession">
     <strong>Tom here.</strong> I've used food banks. I've gotten freezers for free. I've also blown money on Temu crap I didn't need, bought Amazon stuff at full price that was 40% cheaper elsewhere, and spent £50 on a night out when I had £60 to my name. I've been that guy. This page is everything I wish someone had told me.
   </div>
-
   <div class="hero-pills">
     <a href="#impulse" class="hero-pill">🛑 Impulse Buying</a>
     <a href="#phone" class="hero-pill">📱 Smart Phone</a>
@@ -443,6 +422,7 @@
     <a href="#deals" class="hero-pill">🏷️ Deals</a>
     <a href="#budget" class="hero-pill">📊 Budget</a>
     <a href="#pets" class="hero-pill">🐾 Pets</a>
+    <a href="#3am" class="hero-pill">🌙 3am Problem</a>
   </div>
 </div>
 
@@ -451,18 +431,14 @@
   <div class="section-label">Section 01</div>
   <h2>The Impulse Trap</h2>
   <p class="sub">Temu, Amazon, fast fashion. The algorithm is designed to make you spend. Here's how to beat it.</p>
-
   <div class="truth-box">
     <p>You're not bad with money. You're being manipulated by billion-pound companies whose only job is to make you click Buy Now before your brain catches up.</p>
     <cite>— The actual problem</cite>
   </div>
-
   <div class="rule-box">
     <strong>⏳ The 48-Hour Rule</strong><br>
     See something you want? Add it to your wishlist or screenshot it. Wait 48 hours. Still need it? Find it cheaper. 80% of the time you'll forget about it completely. That's not willpower — that's the dopamine wearing off.
   </div>
-
-  <!-- INTERACTIVE TIMER -->
   <div class="timer-box">
     <h3>🛑 Hit The Brakes</h3>
     <p>About to buy something? Start this. Walk away from the screen.</p>
@@ -471,7 +447,6 @@
     <button class="timer-btn" id="timer-btn" onclick="startTimer()">Start My 48-Hour Wait</button>
     <div class="timer-msg" id="timer-msg">✅ Timer saved. Close this tab. Come back in 48 hours.</div>
   </div>
-
   <div class="card-grid">
     <div class="card">
       <div class="card-top"><span class="card-emoji">🛍️</span><h3>Temu & Shein</h3></div>
@@ -499,7 +474,6 @@
   <div class="section-label">Section 02</div>
   <h2>Your Phone Doesn't Need to Be New</h2>
   <p class="sub">Nobody cares what phone you have. Nobody. Here's how Tom does it.</p>
-
   <div class="phone-grid">
     <div class="phone-bad">
       <div class="ph-label">❌ New iPhone 15</div>
@@ -512,12 +486,10 @@
       <p>eBay or Amazon refurbished. Works identically. Sim-only from £8/month. Save £700+.</p>
     </div>
   </div>
-
   <div class="rule-box">
     <strong>📱 The Tom Method:</strong><br>
     Buy 2-3 generations behind on eBay or Amazon refurb. Pair with a sim-only deal (Smarty, iD, Lebara — under £10/month for plenty of data). Total cost under £300. Upgrade again in 2 years when the next "old" flagship drops in price.
   </div>
-
   <div class="card-grid">
     <div class="card">
       <div class="card-top"><span class="card-emoji">📱</span><h3>eBay Refurbished</h3></div>
@@ -546,47 +518,26 @@
   <div class="section-label">Section 03</div>
   <h2>Have a Life For Free</h2>
   <p class="sub">Being broke doesn't mean being bored. Here's how to actually enjoy yourself without spending.</p>
-
   <ul class="checklist">
-    <li>
-      <span class="icon">🌳</span>
-      <div><strong>Walks, parks, nature</strong> Every town has green space. It's free. It's good for you. It costs nothing and genuinely beats doom-scrolling.</div>
-    </li>
-    <li>
-      <span class="icon">🧺</span>
-      <div><strong>Picnics</strong> Aldi food + a blanket + a park = a better afternoon than most pub sessions. £5 for two people. Bring a speaker.</div>
-    </li>
-    <li>
-      <span class="icon">📚</span>
-      <div><strong>Libraries</strong> Free books, free WiFi, free warmth, free events. Audiobooks via the Libby app — free with your library card. Every single month.</div>
-    </li>
-    <li>
-      <span class="icon">🎬</span>
-      <div><strong>Free streaming</strong> BBC iPlayer, ITVX, Channel 4, Pluto TV, Tubi — hundreds of hours of free content. You don't need Netflix AND Disney AND Prime.</div>
-    </li>
-    <li>
-      <span class="icon">🏛️</span>
-      <div><strong>Free museums & galleries</strong> Most national museums in the UK are free. London especially — Natural History, V&A, Science Museum, National Gallery. All free.</div>
-    </li>
-    <li>
-      <span class="icon">🎟️</span>
-      <div><strong>Free local events</strong> Search Eventbrite for free events near you — markets, gigs, festivals, outdoor cinema. Usually something on every weekend.</div>
-    </li>
+    <li><span class="icon">🌳</span><div><strong>Walks, parks, nature</strong> Every town has green space. It's free. It's good for you. It costs nothing and genuinely beats doom-scrolling.</div></li>
+    <li><span class="icon">🧺</span><div><strong>Picnics</strong> Aldi food + a blanket + a park = a better afternoon than most pub sessions. £5 for two people. Bring a speaker.</div></li>
+    <li><span class="icon">📚</span><div><strong>Libraries</strong> Free books, free WiFi, free warmth, free events. Audiobooks via the Libby app — free with your library card. Every single month.</div></li>
+    <li><span class="icon">🎬</span><div><strong>Free streaming</strong> BBC iPlayer, ITVX, Channel 4, Pluto TV, Tubi — hundreds of hours of free content. You don't need Netflix AND Disney AND Prime.</div></li>
+    <li><span class="icon">🏛️</span><div><strong>Free museums & galleries</strong> Most national museums in the UK are free. London especially — Natural History, V&A, Science Museum, National Gallery. All free.</div></li>
+    <li><span class="icon">🎟️</span><div><strong>Free local events</strong> Search Eventbrite for free events near you — markets, gigs, festivals, outdoor cinema. Usually something on every weekend.</div></li>
   </ul>
 </div>
 
 <hr class="divider">
 
-<!-- DEALS & CASHBACK -->
+<!-- CASHBACK -->
 <div id="cashback" class="section">
   <div class="section-label">Section 04</div>
   <h2>Cashback & Deals — Always</h2>
   <p class="sub">Never buy anything online without checking these first. Takes 30 seconds. Saves real money.</p>
-
   <div class="rule-box">
     <strong>The Rule:</strong> Before ANY online purchase — check TopCashback. Check Honey for codes. Check CamelCamelCamel if it's Amazon. Takes 2 minutes. Often saves 5-15%. Skip this and you're leaving free money on the table every single time.
   </div>
-
   <div class="card-grid">
     <div class="card">
       <div class="card-top"><span class="card-emoji">💰</span><h3>TopCashback</h3></div>
@@ -623,12 +574,11 @@
 
 <hr class="divider">
 
-<!-- EATING & DRINKING SMART -->
+<!-- DEALS -->
 <div id="deals" class="section">
   <div class="section-label">Section 05</div>
   <h2>Eating & Drinking Smart</h2>
   <p class="sub">You can still go out. You just stop paying full price.</p>
-
   <div class="card-grid">
     <div class="card">
       <div class="card-top"><span class="card-emoji">🍺</span><h3>Happy Hours</h3></div>
@@ -661,17 +611,15 @@
 
 <hr class="divider">
 
-<!-- BUDGET THAT WORKS -->
+<!-- BUDGET -->
 <div id="budget" class="section">
   <div class="section-label">Section 06</div>
   <h2>Budget That Doesn't Ruin Your Life</h2>
   <p class="sub">You don't need a spreadsheet. You need one rule and a bit of patience.</p>
-
   <div class="truth-box">
     <p>Most people aren't broke because they earn too little. They're broke because they spend it all the second it lands. The money was there. It just left immediately.</p>
     <cite>— The real reason</cite>
   </div>
-
   <div class="cost-compare">
     <div class="cost-bad">
       <div class="label">❌ Broke Loop</div>
@@ -684,32 +632,13 @@
       <p>Paid Friday. Moved £200 to savings immediately. Never saw it. Still there.</p>
     </div>
   </div>
-
   <ul class="checklist">
-    <li>
-      <span class="icon">💸</span>
-      <div><strong>Pay yourself first</strong> The second you get paid — move a set amount to savings. Even £20. Before you buy anything. You will not miss what you never see.</div>
-    </li>
-    <li>
-      <span class="icon">📱</span>
-      <div><strong>Use a Monzo pot</strong> Monzo lets you separate money into pots — rent, food, fun. When the fun pot is gone, fun is done. No willpower needed. The system does it.</div>
-    </li>
-    <li>
-      <span class="icon">📋</span>
-      <div><strong>Know your three numbers</strong> Monthly income. Monthly fixed costs (rent, bills, phone). What's left. That's your real budget. Most people don't know their own numbers.</div>
-    </li>
-    <li>
-      <span class="icon">🔪</span>
-      <div><strong>Cut the subscriptions</strong> Check your bank statement right now. Count the subscriptions. Netflix, Spotify, Disney+, gym you don't use, apps you forgot. Cancel two today.</div>
-    </li>
-    <li>
-      <span class="icon">⚡</span>
-      <div><strong>Switch energy tariff every year</strong> Use USwitch or Compare the Market. Takes 20 minutes. Saves £100-300 a year. Most people never do it and just pay more forever.</div>
-    </li>
-    <li>
-      <span class="icon">📞</span>
-      <div><strong>Ring and threaten to cancel</strong> Sky, broadband, mobile — ring retention and say you're leaving. They will offer you a better deal 80% of the time. Every time. Takes 10 minutes.</div>
-    </li>
+    <li><span class="icon">💸</span><div><strong>Pay yourself first</strong> The second you get paid — move a set amount to savings. Even £20. Before you buy anything. You will not miss what you never see.</div></li>
+    <li><span class="icon">📱</span><div><strong>Use a Monzo pot</strong> Monzo lets you separate money into pots — rent, food, fun. When the fun pot is gone, fun is done. No willpower needed. The system does it.</div></li>
+    <li><span class="icon">📋</span><div><strong>Know your three numbers</strong> Monthly income. Monthly fixed costs (rent, bills, phone). What's left. That's your real budget. Most people don't know their own numbers.</div></li>
+    <li><span class="icon">🔪</span><div><strong>Cut the subscriptions</strong> Check your bank statement right now. Count the subscriptions. Netflix, Spotify, Disney+, gym you don't use, apps you forgot. Cancel two today.</div></li>
+    <li><span class="icon">⚡</span><div><strong>Switch energy tariff every year</strong> Use USwitch or Compare the Market. Takes 20 minutes. Saves £100-300 a year. Most people never do it and just pay more forever.</div></li>
+    <li><span class="icon">📞</span><div><strong>Ring and threaten to cancel</strong> Sky, broadband, mobile — ring retention and say you're leaving. They will offer you a better deal 80% of the time. Every time. Takes 10 minutes.</div></li>
   </ul>
 </div>
 
@@ -720,7 +649,6 @@
   <div class="section-label">Section 07</div>
   <h2>Your Pets Don't Have to Suffer Either</h2>
   <p class="sub">Free vet care, free pet food. Ask. You'll be surprised.</p>
-
   <div class="card-grid">
     <div class="card">
       <div class="card-top"><span class="card-emoji">🐾</span><h3>PDSA — Free Vet Care</h3></div>
@@ -729,16 +657,15 @@
     </div>
     <div class="card">
       <div class="card-top"><span class="card-emoji">🥫</span><h3>Pet Food Banks</h3></div>
-      <p>Yes, pet food banks exist. Many food banks accept donations of pet food and give it out alongside human food. Some have dedicated pet food banks. Ring your nearest food bank and ask directly.</p>
-      <a href="https://www.trusselltrust.org/get-help/find-a-foodbank/" target="_blank" class="card-link" rel="noopener noreferrer">Find your food bank →</a>
+      <p>Yes, pet food banks exist. Many food banks accept donations of pet food and give it out alongside human food. Ring your nearest food bank and ask directly.</p>
+      <a href="https://www.trusselltrust.org/get-help/find-a-foodbank/" class="card-link" target="_blank" rel="noopener noreferrer">Find your food bank →</a>
     </div>
     <div class="card">
       <div class="card-top"><span class="card-emoji">📱</span><h3>OLIO — Free Pet Supplies</h3></div>
-      <p>People regularly give away pet food, toys, beds, crates and supplies on OLIO — food their pet won't eat, leftover from pets that passed, excess stock. Check before you buy anything pet-related.</p>
+      <p>People regularly give away pet food, toys, beds, crates and supplies on OLIO. Check before you buy anything pet-related.</p>
       <a href="https://olioapp.com/en/" class="card-link" target="_blank" rel="noopener noreferrer">Get OLIO →</a>
     </div>
   </div>
-
   <div class="rule-box">
     <strong>The Proud Person's Trap:</strong><br>
     "I can't go to a food bank, I'm not that desperate." Meanwhile you're begging strangers online for £50 at 2am. The food bank is right there. The free vet care is right there. Pride costs more than it's worth. Go and get it.
@@ -747,17 +674,83 @@
 
 <hr class="divider">
 
-<!-- LOAN REALITY CHECK -->
+<!-- 3AM PROBLEM — NEW SECTION -->
+<div id="3am" class="section">
+  <div class="section-label">Section 08</div>
+  <h2>The 3am Problem</h2>
+  <p class="sub">It's not the £10. It's that you had nobody to call.</p>
+
+  <div class="truth-box">
+    <p>Tom lost his bus pass at 16. Called his dad reverse charges. Dad was pissed off. Came anyway. That's the whole solution. The question is never "how do I get home" — it's "do I have someone I can call?"</p>
+    <cite>— The thing nobody teaches you</cite>
+  </div>
+
+  <div class="rule-box">
+    <strong>Why people end up begging on Reddit at 3am:</strong><br>
+    Not stupidity. Loneliness. No mate with a car. No dad to reverse charge. No manager they'd ask. Reddit answers when real people don't. It's a loneliness problem dressed up as a money problem.
+  </div>
+
+  <div class="card-grid">
+
+    <div class="card">
+      <div class="card-top"><span class="card-emoji">📞</span><h3>Who to Call — In Order</h3></div>
+      <p>Before Reddit. Before anything. Run down this list first:</p>
+      <ul class="list-plain">
+        <li><span class="num">1.</span> Your manager — tonight, they can sort it</li>
+        <li><span class="num">2.</span> Any mate with a car — even one you haven't spoken to in months</li>
+        <li><span class="num">3.</span> Mum. Dad. Sibling. Awkward is fine. Stranded isn't.</li>
+        <li><span class="num">4.</span> Ask the venue — pubs often sort staff getting home</li>
+        <li><span class="num">5.</span> Google the night bus. It probably exists.</li>
+        <li><span class="num">6.</span> Walk if under 30 mins and it's safe</li>
+        <li><span class="num">7.</span> Sit in 24hr McDonald's til morning</li>
+        <li><span class="num dim">47.</span> <span style="color:#444;">Reddit</span></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><span class="card-emoji">💷</span><h3>The £20 Rule</h3></div>
+      <p>Before you go anywhere — night out, work, anywhere — you have £20 you will not touch. Emergency only. Bus fare. Taxi if it goes wrong.</p>
+      <p style="margin-top:10px;">Separate pocket. Separate card. Monzo pot called GET HOME. Whatever stops you spending it. It just exists before you leave the house.</p>
+      <div class="rule-box" style="margin-top:14px;">
+        <strong>The rule:</strong><br>
+        No £20 set aside = you can't afford to go out yet. Wait one more week.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><span class="card-emoji">🤝</span><h3>Be the Mate First</h3></div>
+      <p>The person who picks you up at 3am already exists in your life. You just haven't maintained it. You only call them when you need something.</p>
+      <p style="margin-top:10px;">Give people lifts when you can. Lend a tenner when you have it. Show up. Be worth calling — then people answer.</p>
+      <div class="tip-box" style="margin-top:14px;">
+        <strong>💡 Tom's rule:</strong> Always offer the lift home first. Costs you nothing. Means everything later.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="truth-box" style="margin-top:24px;">
+    <p>If you genuinely have nobody to call at 3am — that's worth noticing. Not judging. Just noticing. Because fixing the loneliness fixes most of the money problems too. People with real networks don't end up begging online. They get helped by the people around them before it ever gets that bad.</p>
+    <cite>— The real lesson from a beer garden at 3am</cite>
+  </div>
+
+  <div style="text-align:center; margin-top:24px;">
+    <a href="https://smallville1979.github.io/mental-health/" style="display:inline-block; background:var(--orange); color:#000; font-weight:800; font-size:14px; padding:13px 28px; border-radius:999px; text-decoration:none;">🧠 Feeling isolated? Free help exists →</a>
+  </div>
+
+</div>
+
+<hr class="divider">
+
+<!-- LOAN REALITY -->
 <div class="section">
   <div class="section-label">The Bottom Line</div>
   <h2>Loans Are Not The Answer</h2>
-  <p class="sub">Never have been. Never will be. Here's why in one number.</p>
-
+  <p class="sub">Never have been. Never will be.</p>
   <div class="cost-compare">
     <div class="cost-bad">
       <div class="label">❌ £100 Payday Loan</div>
       <div class="amount">£160+</div>
-      <p>What you pay back. £60 gone. For what? A temporary fix to a permanent problem.</p>
+      <p>What you pay back. £60 gone for a temporary fix to a permanent problem.</p>
     </div>
     <div class="cost-good">
       <div class="label">✅ This page</div>
@@ -765,13 +758,12 @@
       <p>Free grants, free food, free stuff, cashback, deals. No debt. No trap.</p>
     </div>
   </div>
-
-  <div style="text-align:center; margin-top: 24px;">
+  <div style="text-align:center; margin-top:24px;">
     <a href="https://smallville1979.github.io/no-loans/" style="display:inline-block; background:var(--red); color:#fff; font-weight:800; font-size:15px; padding:14px 30px; border-radius:999px; text-decoration:none;">Why loans always make it worse →</a>
   </div>
 </div>
 
-<!-- SHARE BAR -->
+<!-- SHARE -->
 <div class="share-bar">
   <h3>Know someone stuck in the broke loop?</h3>
   <p>Send them this. It's free. It might actually change things for them.</p>
@@ -779,7 +771,7 @@
 </div>
 
 <!-- NETWORK -->
-<div style="padding: 24px 16px 12px; max-width:860px; margin:0 auto;">
+<div style="padding:24px 16px 12px; max-width:860px; margin:0 auto;">
   <p style="font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--muted); margin-bottom:14px;">More free help</p>
 </div>
 <div class="network-grid">
@@ -788,18 +780,15 @@
   <a href="https://smallville1979.github.io/no-loans/" class="net-link"><span>🚫</span>No Loans</a>
   <a href="https://smallville1979.github.io/benefits-guide/" class="net-link"><span>💷</span>Benefits Guide</a>
   <a href="https://smallville1979.github.io/need-food/" class="net-link"><span>🍎</span>Need Food</a>
-  <a href="https://smallville1979.github.io/break-the-cycle/" class="net-link"><span>🔄</span>Break The Cycle</a>
+  <a href="https://smallville1979.github.io/mental-health/" class="net-link"><span>💙</span>Mental Health</a>
 </div>
 
 <script>
-// 48-hour impulse timer
 var timerInterval;
 var endTime;
-
 function startTimer() {
   var btn = document.getElementById('timer-btn');
   var msg = document.getElementById('timer-msg');
-
   if (timerInterval) {
     clearInterval(timerInterval);
     timerInterval = null;
@@ -808,11 +797,9 @@ function startTimer() {
     msg.style.display = 'none';
     return;
   }
-
   endTime = Date.now() + (48 * 60 * 60 * 1000);
   btn.textContent = 'Reset Timer';
   msg.style.display = 'block';
-
   timerInterval = setInterval(function() {
     var remaining = endTime - Date.now();
     if (remaining <= 0) {
