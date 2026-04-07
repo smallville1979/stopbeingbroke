@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Broke 🧠 — Stop Being Skint Forever | UK Money Guide</title>
+  <meta name="description" content="Stop buying crap you don't need. Learn to live well on nothing. Free food, free fun, cashback, deals — and finally stop begging online at 2am.">
+  <meta property="og:title" content="Smart Broke 🧠 — Stop Being Skint Forever">
+  <meta property="og:description" content="Real talk on impulse buying, free living, cashback, deals and actually saving money. No lectures. Just truth.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://smallville1979.github.io/smart-broke/">
+  <script src="https://smallville1979.github.io/kit/kit.js" defer></script>
+
+  <style>
+    :root {
+      --orange: #ff6b00;
+      --orange-bright: #ff9500;
+      --yellow: #ffd600;
+      --dark: #0e0e0e;
+      --darker: #080808;
+      --card: #161616;
+      --card2: #1c1c1c;
+      --text: #f0f0f0;
+      --muted: #999;
+      --green: #00c853;
+      --red: #ff3d3d;
+      --radius: 14px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--dark);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      padding-bottom: 60px;
+    }
+
+    /* HERO */
+    .hero {
+      background: var(--darker);
+      border-bottom: 4px solid var(--orange);
+      padding: 52px 20px 44px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(255,107,0,0.12) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 30%, rgba(255,149,0,0.07) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: var(--orange);
+      color: #000;
+      font-weight: 900;
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      padding: 5px 16px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: clamp(32px, 8vw, 62px);
+      font-weight: 900;
+      line-height: 1.05;
+      color: #fff;
+      margin-bottom: 16px;
+      letter-spacing: -1px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--orange);
+    }
+    .confession {
+      background: rgba(255,107,0,0.08);
+      border: 1px solid rgba(255,107,0,0.3);
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      max-width: 580px;
+      margin: 0 auto 28px;
+      text-align: left;
+      font-size: 15px;
+      color: #ccc;
+      line-height: 1.6;
+    }
+    .confession strong { color: var(--orange); }
+    .hero-pills {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .hero-pill {
+      background: #1e1e1e;
+      border: 1px solid #333;
+      color: #ddd;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: border-color .15s, color .15s;
+    }
+    .hero-pill:hover { border-color: var(--orange); color: var(--orange); }
+
+    /* SECTION */
+    .section {
+      padding: 40px 16px 8px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .section-label {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 10px;
+    }
+    .section h2 {
+      font-size: clamp(22px, 5.5vw, 32px);
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+      line-height: 1.15;
+    }
+    .section .sub {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 24px;
+    }
+
+    /* CARDS */
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    @media(min-width:560px) { .card-grid { grid-template-columns: 1fr 1fr; } }
+    @media(min-width:800px) { .card-grid { grid-template-columns: 1fr 1fr 1fr; } }
+
+    .card {
+      background: var(--card);
+      border: 1px solid #252525;
+      border-radius: var(--radius);
+      padding: 20px;
+      transition: border-color .15s, transform .15s;
+    }
+    .card:hover { border-color: var(--orange); transform: translateY(-2px); }
+    .card-top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .card-emoji { font-size: 24px; }
+    .card h3 { font-size: 15px; font-weight: 700; color: #fff; }
+    .card p { font-size: 13px; color: var(--muted); line-height: 1.55; margin-bottom: 14px; }
+    .card-link {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--orange);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,107,0,0.3);
+      padding-bottom: 1px;
+      transition: border-color .15s;
+    }
+    .card-link:hover { border-color: var(--orange); }
+
+    /* AFFILIATE CARD */
+    .aff-card {
+      background: linear-gradient(135deg, #1a1200, #161616);
+      border: 1px solid rgba(255,214,0,0.2);
+      border-radius: var(--radius);
+      padding: 20px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      transition: border-color .15s;
+    }
+    .aff-card:hover { border-color: var(--yellow); }
+    .aff-badge {
+      background: var(--yellow);
+      color: #000;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .aff-card h3 { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 5px; }
+    .aff-card p { font-size: 13px; color: var(--muted); margin-bottom: 10px; line-height: 1.5; }
+    .aff-card a {
+      display: inline-block;
+      background: var(--yellow);
+      color: #000;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      text-decoration: none;
+    }
+
+    /* RULE BOX */
+    .rule-box {
+      background: var(--card2);
+      border-left: 4px solid var(--orange);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-size: 15px;
+      color: #ddd;
+      line-height: 1.6;
+    }
+    .rule-box strong { color: var(--orange); font-size: 16px; }
+
+    /* TRUTH BOX */
+    .truth-box {
+      background: #0e0e0e;
+      border: 1px solid #2a2a2a;
+      border-radius: var(--radius);
+      padding: 22px;
+      margin: 20px 0;
+      font-size: 15px;
+      color: #ccc;
+      font-style: italic;
+      position: relative;
+    }
+    .truth-box::before {
+      content: '"';
+      position: absolute;
+      top: -8px;
+      left: 16px;
+      font-size: 60px;
+      color: var(--orange);
+      font-style: normal;
+      line-height: 1;
+      font-weight: 900;
+    }
+    .truth-box p { padding-top: 18px; }
+    .truth-box cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 13px;
+      color: var(--orange);
+      font-weight: 700;
+    }
+
+    /* COUNTER */
+    .cost-compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 16px 0;
+    }
+    .cost-bad {
+      background: linear-gradient(135deg, #1a0000, #160000);
+      border: 1px solid rgba(255,61,61,0.3);
+      border-radius: var(--radius);
+      padding: 16px;
+      text-align: center;
+    }
+    .cost-bad .label { font-size: 11px; font-weight: 800; letter-spacing: 1px; color: var(--red); text-transform: uppercase; margin-bottom: 6px; }
+    .cost-bad .amount { font-size: 28px; font-weight: 900; color: var(--red); }
+    .cost-bad p { font-size: 12px; color: #777; margin-top: 4px; }
+    .cost-good {
+      background: linear-gradient(135deg, #001a00, #001200);
+      border: 1px solid rgba(0,200,83,0.3);
+      border-radius: var(--radius);
+      padding: 16px;
+      text-align: center;
+    }
+    .cost-good .label { font-size: 11px; font-weight: 800; letter-spacing: 1px; color: var(--green); text-transform: uppercase; margin-bottom: 6px; }
+    .cost-good .amount { font-size: 28px; font-weight: 900; color: var(--green); }
+    .cost-good p { font-size: 12px; color: #777; margin-top: 4px; }
+
+    /* CHECKLIST */
+    .checklist {
+      list-style: none;
+      margin: 16px 0;
+    }
+    .checklist li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 10px 0;
+      border-bottom: 1px solid #1e1e1e;
+      font-size: 14px;
+      color: #ccc;
+    }
+    .checklist li:last-child { border-bottom: none; }
+    .checklist li .icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+    .checklist li strong { color: #fff; display: block; margin-bottom: 2px; }
+
+    /* DIVIDER */
+    hr.divider {
+      border: none;
+      border-top: 1px solid #1e1e1e;
+      margin: 40px 16px 0;
+      max-width: 860px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* IMPULSE TIMER */
+    .timer-box {
+      background: var(--card2);
+      border: 2px solid var(--orange);
+      border-radius: var(--radius);
+      padding: 24px;
+      text-align: center;
+      margin: 20px 0;
+    }
+    .timer-box h3 { font-size: 20px; font-weight: 900; color: #fff; margin-bottom: 8px; }
+    .timer-box p { color: var(--muted); font-size: 14px; margin-bottom: 16px; }
+    .timer-display {
+      font-size: 48px;
+      font-weight: 900;
+      color: var(--orange);
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -2px;
+    }
+    .timer-btn {
+      margin-top: 16px;
+      background: var(--orange);
+      color: #000;
+      font-weight: 900;
+      font-size: 14px;
+      padding: 12px 28px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      transition: background .15s;
+    }
+    .timer-btn:hover { background: var(--orange-bright); }
+    .timer-msg { margin-top: 14px; font-size: 14px; color: var(--green); font-weight: 700; display: none; }
+
+    /* NETWORK */
+    .network-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 8px 16px 40px;
+    }
+    @media(min-width:600px) { .network-grid { grid-template-columns: repeat(3,1fr); } }
+    .net-link {
+      background: #141414;
+      border: 1px solid #242424;
+      border-radius: 10px;
+      padding: 12px 14px;
+      text-decoration: none;
+      color: #bbb;
+      font-size: 13px;
+      font-weight: 600;
+      transition: border-color .15s, color .15s;
+    }
+    .net-link:hover { border-color: var(--orange); color: var(--orange); }
+    .net-link span { display: block; font-size: 18px; margin-bottom: 4px; }
+
+    /* SHARE */
+    .share-bar {
+      background: linear-gradient(135deg, #111, #0a0a0a);
+      border-top: 3px solid var(--orange);
+      border-bottom: 1px solid #222;
+      padding: 28px 16px;
+      text-align: center;
+      margin: 40px 0 0;
+    }
+    .share-bar h3 { font-size: 20px; font-weight: 900; color: #fff; margin-bottom: 6px; }
+    .share-bar p { color: var(--muted); font-size: 14px; margin-bottom: 18px; }
+    .share-btn {
+      display: inline-block;
+      background: #25d366;
+      color: #fff;
+      font-weight: 800;
+      font-size: 14px;
+      padding: 12px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+    }
+
+    /* PHONE COMPARE */
+    .phone-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 16px 0;
+    }
+    .phone-bad, .phone-good {
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    .phone-bad {
+      background: #150000;
+      border: 1px solid rgba(255,61,61,0.25);
+    }
+    .phone-good {
+      background: #001500;
+      border: 1px solid rgba(0,200,83,0.25);
+    }
+    .phone-bad .ph-label { color: var(--red); font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+    .phone-good .ph-label { color: var(--green); font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+    .phone-bad .ph-price, .phone-good .ph-price { font-size: 26px; font-weight: 900; margin-bottom: 4px; }
+    .phone-bad .ph-price { color: var(--red); }
+    .phone-good .ph-price { color: var(--green); }
+    .phone-bad p, .phone-good p { font-size: 12px; color: #666; line-height: 1.5; }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">🧠 Real Talk · No Lectures · UK</div>
+  <h1>Stop Being<br><em>Broke Forever</em></h1>
+
+  <div class="confession">
+    <strong>Tom here.</strong> I've used food banks. I've gotten freezers for free. I've also blown money on Temu crap I didn't need, bought Amazon stuff at full price that was 40% cheaper elsewhere, and spent £50 on a night out when I had £60 to my name. I've been that guy. This page is everything I wish someone had told me.
+  </div>
+
+  <div class="hero-pills">
+    <a href="#impulse" class="hero-pill">🛑 Impulse Buying</a>
+    <a href="#phone" class="hero-pill">📱 Smart Phone</a>
+    <a href="#freefun" class="hero-pill">🎉 Free Fun</a>
+    <a href="#cashback" class="hero-pill">💳 Cashback</a>
+    <a href="#deals" class="hero-pill">🏷️ Deals</a>
+    <a href="#budget" class="hero-pill">📊 Budget</a>
+    <a href="#pets" class="hero-pill">🐾 Pets</a>
+  </div>
+</div>
+
+<!-- IMPULSE -->
+<div id="impulse" class="section">
+  <div class="section-label">Section 01</div>
+  <h2>The Impulse Trap</h2>
+  <p class="sub">Temu, Amazon, fast fashion. The algorithm is designed to make you spend. Here's how to beat it.</p>
+
+  <div class="truth-box">
+    <p>You're not bad with money. You're being manipulated by billion-pound companies whose only job is to make you click Buy Now before your brain catches up.</p>
+    <cite>— The actual problem</cite>
+  </div>
+
+  <div class="rule-box">
+    <strong>⏳ The 48-Hour Rule</strong><br>
+    See something you want? Add it to your wishlist or screenshot it. Wait 48 hours. Still need it? Find it cheaper. 80% of the time you'll forget about it completely. That's not willpower — that's the dopamine wearing off.
+  </div>
+
+  <!-- INTERACTIVE TIMER -->
+  <div class="timer-box">
+    <h3>🛑 Hit The Brakes</h3>
+    <p>About to buy something? Start this. Walk away from the screen.</p>
+    <div class="timer-display" id="timer">48:00:00</div>
+    <br>
+    <button class="timer-btn" id="timer-btn" onclick="startTimer()">Start My 48-Hour Wait</button>
+    <div class="timer-msg" id="timer-msg">✅ Timer saved. Close this tab. Come back in 48 hours.</div>
+  </div>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-top"><span class="card-emoji">🛍️</span><h3>Temu & Shein</h3></div>
+      <p>The prices look insane because the quality often is. £3 tops that last 3 washes. Gadgets that break in a week. But — there ARE decent finds. Electronics accessories, phone cases, storage — fine. Clothes and shoes? Risky. Use the 48-hour rule. Read reviews obsessively.</p>
+      <!-- AFFILIATE PLACEHOLDER: replace href with your Temu affiliate link -->
+      <a href="https://www.temu.com" class="card-link" target="_blank" rel="noopener noreferrer">Browse Temu →</a>
+    </div>
+    <div class="card">
+      <div class="card-top"><span class="card-emoji">📦</span><h3>Amazon — Never Full Price</h3></div>
+      <p>Amazon prices change hundreds of times a day. Use CamelCamelCamel to see price history before you buy. Never buy electronics at "regular" price — wait for a sale or go refurbished. The Subscribe & Save discount on household staples is genuinely good.</p>
+      <a href="https://camelcamelcamel.com" class="card-link" target="_blank" rel="noopener noreferrer">Check price history →</a>
+    </div>
+    <div class="card">
+      <div class="card-top"><span class="card-emoji">🔔</span><h3>Set a Price Alert</h3></div>
+      <p>Want something specific? Set a price alert on CamelCamelCamel (Amazon), Honey, or Google Shopping. When it drops — buy. When it hasn't dropped — wait. Patience makes you money. Impatience makes Amazon money.</p>
+      <a href="https://www.camelcamelcamel.com" class="card-link" target="_blank" rel="noopener noreferrer">Set alerts free →</a>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- PHONE -->
+<div id="phone" class="section">
+  <div class="section-label">Section 02</div>
+  <h2>Your Phone Doesn't Need to Be New</h2>
+  <p class="sub">Nobody cares what phone you have. Nobody. Here's how Tom does it.</p>
+
+  <div class="phone-grid">
+    <div class="phone-bad">
+      <div class="ph-label">❌ New iPhone 15</div>
+      <div class="ph-price">£999</div>
+      <p>Plus £50/month contract. Same apps. Same photos. Just lighter wallet and heavier anxiety.</p>
+    </div>
+    <div class="phone-good">
+      <div class="ph-label">✅ Refurb iPhone 13</div>
+      <div class="ph-price">£280</div>
+      <p>eBay or Amazon refurbished. Works identically. Sim-only from £8/month. Save £700+.</p>
+    </div>
+  </div>
+
+  <div class="rule-box">
+    <strong>📱 The Tom Method:</strong><br>
+    Buy 2-3 generations behind on eBay or Amazon refurb. Pair with a sim-only deal (Smarty, iD, Lebara — under £10/month for plenty of data). Total cost under £300. Upgrade again in 2 years when the next "old" flagship drops in price.
+  </div>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-top"><span class="card-emoji">📱</span><h3>eBay Refurbished</h3></div>
+      <p>Filter to "Seller refurbished" or "Excellent" condition. Samsung Galaxy S22, iPhone 13, Pixel 7 — all under £200-300. Fully working. Often with warranty.</p>
+      <!-- AFFILIATE PLACEHOLDER: replace with eBay affiliate link -->
+      <a href="https://www.ebay.co.uk/b/Mobile-Phones/9355/bn_319682" class="card-link" target="_blank" rel="noopener noreferrer">Browse refurb phones →</a>
+    </div>
+    <div class="card">
+      <div class="card-top"><span class="card-emoji">🔄</span><h3>Amazon Renewed</h3></div>
+      <p>Amazon's own refurb programme with a 1-year guarantee. Cheaper than new, safer than random eBay sellers. Look here first for Apple, Samsung, Google Pixel.</p>
+      <!-- AFFILIATE PLACEHOLDER: replace with Amazon affiliate link -->
+      <a href="https://www.amazon.co.uk/renewed" class="card-link" target="_blank" rel="noopener noreferrer">Amazon Renewed →</a>
+    </div>
+    <div class="card">
+      <div class="card-top"><span class="card-emoji">📶</span><h3>Sim-Only Deals</h3></div>
+      <p>Smarty, iD Mobile, Lebara — get 30GB+ for under £10/month. No contract. Leave any time. Stop paying £40-60/month for the same calls and data.</p>
+      <a href="https://www.smarty.co.uk" class="card-link" target="_blank" rel="noopener noreferrer">Smarty sim deals →</a>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- FREE FUN -->
+<div id="freefun" class="section">
+  <div class="section-label">Section 03</div>
+  <h2>Have a Life For Free</h2>
+  <p class="sub">Being broke doesn't mean being bored. Here's how to actually enjoy yourself without spending.</p>
+
+  <ul class="checklist">
+    <li>
+      <span class="icon">🌳</span>
+      <div><strong>Walks, parks, nature</strong> Every town has green space. It's free. It's good for you. It costs nothing and genuinely beats doom-scrolling.</div>
+    </li>
+    <li>
+      <span class="icon">🧺</span>
+      <div><strong>Picnics</strong> Aldi food + a blanket + a park = a better afternoon than most pub sessions. £5 for two people. Bring a speaker.</div>
+    </li>
+    <li>
+      <span class="icon">📚</span>
+      <div><strong>Libraries</strong> Free books, free WiFi, free warmth, free events. Audiobooks via the Libby app — free with your library card. Every single month.</div>
+    </li>
+    <li>
+      <span class="icon">🎬</span>
+      <div><strong>Free streaming</strong> BBC iPlayer, ITVX, Channel 4, Pluto TV, Tubi — hundreds of hours of free content. You don't need Netflix AND Disney AND Prime.</div>
+    </li>
+    <li>
+      <span class="icon">🏛️</span>
+      <div><strong>Free museums & galleries</strong> Most national museums in the UK are free. London especially — Natural History, V&A, Science Museum, National Gallery. All free.</div>
+    </li>
+    <li>
+      <span class="icon">🎟️</span>
+      <div><strong>Free local events</strong> Search Eventbrite for free events near you — markets, gigs, festivals, outdoor cinema. Usually something on every weekend.</div>
+    </li>
+  </ul>
+</div>
+
+<hr class="divider">
+
+<!-- DEALS & CASHBACK -->
+<div id="cashback" class="section">
+  <div class="section-label">Section 04</div>
+  <h2>Cashback & Deals — Always</h2>
+  <p class="sub">Never buy anything online without checking these first. Takes 30 seconds. Saves real money.</p>
+
+  <div class="rule-box">
+    <strong>The Rule:</strong> Before ANY online purchase — check TopCashback. Check Honey for codes. Check CamelCamelCamel if it's Amazon. Takes 2 minutes. Often saves 5-15%. Skip this and you're leaving free money on the table every single time.
+  </div>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-top"><span class="card-emoji">💰</span><h3>TopCashback</h3></div>
+      <p>The best cashback site in the UK. Buy through their link, get a % back on thousands of retailers — Amazon, ASOS, Booking.com, supermarkets. Free to join. Tom uses this for everything.</p>
+      <a href="https://www.topcashback.co.uk" class="card-link" target="_blank" rel="noopener noreferrer">Join free →</a>
+    </div>
+    <div class="card">
+      <div class="card-top"><span class="card-emoji">🍯</span><h3>Honey (Browser Extension)</h3></div>
+      <p>Automatically finds and applies coupon codes at checkout. Free Chrome/Firefox extension. Saves on average £15 per order when it finds a code. Just install and forget it.</p>
+      <a href="https://www.joinhoney.com/gb" class="card-link" target="_blank" rel="noopener noreferrer">Install Honey free →</a>
+    </div>
+    <div class="card">
+      <div class="card-top"><span class="card-emoji">🔍</span><h3>Google Shopping</h3></div>
+      <p>Before buying anywhere — Google the product and hit "Shopping." Instantly compares prices across dozens of UK retailers. Takes 10 seconds. Often finds it £20-30 cheaper somewhere else.</p>
+      <a href="https://www.google.co.uk/shopping" class="card-link" target="_blank" rel="noopener noreferrer">Compare prices →</a>
+    </div>
+    <div class="card">
+      <div class="card-top"><span class="card-emoji">📊</span><h3>CamelCamelCamel</h3></div>
+      <p>Amazon price history tracker. Paste any Amazon link and see if the "sale price" is actually a sale or if it's been that price for years. Never get fooled by fake discounts again.</p>
+      <a href="https://camelcamelcamel.com" class="card-link" target="_blank" rel="noopener noreferrer">Check history →</a>
+    </div>
+    <div class="card">
+      <div class="card-top"><span class="card-emoji">🎫</span><h3>Groupon</h3></div>
+      <p>Massively discounted experiences, restaurants, spa days, activities. Great for dates and days out you actually want to do. Always check Groupon before paying full price for anything experiential.</p>
+      <a href="https://www.groupon.co.uk" class="card-link" target="_blank" rel="noopener noreferrer">Browse deals →</a>
+    </div>
+    <div class="card">
+      <div class="card-top"><span class="card-emoji">🍽️</span><h3>Tastecard</h3></div>
+      <p>Tom's personal favourite. 2-for-1 meals or 50% off at thousands of UK restaurants. £35/year. If you eat out even 4-5 times a year it pays for itself. Trial periods sometimes available for free.</p>
+      <a href="https://www.tastecard.co.uk" class="card-link" target="_blank" rel="noopener noreferrer">Get Tastecard →</a>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- EATING & DRINKING SMART -->
+<div id="deals" class="section">
+  <div class="section-label">Section 05</div>
+  <h2>Eating & Drinking Smart</h2>
+  <p class="sub">You can still go out. You just stop paying full price.</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-top"><span class="card-emoji">🍺</span><h3>Happy Hours</h3></div>
+      <p>Most pubs and bars have happy hours — usually 4-7pm weekdays. Half-price pints, 2-for-1 cocktails. Go earlier, spend half. Search "[your town] happy hour" and you'll find a list.</p>
+    </div>
+    <div class="card">
+      <div class="card-top"><span class="card-emoji">🍱</span><h3>Too Good To Go</h3></div>
+      <p>Grab surplus food bags from restaurants and cafes for £2-5. Proper food — sushi, burgers, bakery goods — not scraps. Some people eat exclusively from this for lunch. Life-changing app.</p>
+      <a href="https://toogoodtogo.com/en-gb" class="card-link" target="_blank" rel="noopener noreferrer">Download free →</a>
+    </div>
+    <div class="card">
+      <div class="card-top"><span class="card-emoji">🏷️</span><h3>Yellow Stickers</h3></div>
+      <p>Learn your supermarket's markdown schedule. Most reduce at 6-8pm. Sunday nights are golden. Whole joint of meat for £2. Fresh veg at 10p. Batch cook and freeze. Your food bill halves.</p>
+    </div>
+    <div class="card">
+      <div class="card-top"><span class="card-emoji">☕</span><h3>Loyalty Schemes — Actually Use Them</h3></div>
+      <p>Costa, Pret, Greggs all have loyalty apps. Free coffees, free food, rewards. Nectar, Clubcard, MyWaitrose — scan every single time. These add up to real money over a year.</p>
+    </div>
+    <div class="card">
+      <div class="card-top"><span class="card-emoji">🛒</span><h3>Aldi First. Always.</h3></div>
+      <p>Main shop at Aldi. Specific items you can't find there — top up elsewhere. This one habit saves most families £100-200/month. The food is the same. The packaging just costs less.</p>
+    </div>
+    <div class="card">
+      <div class="card-top"><span class="card-emoji">💳</span><h3>Vouchercodes & Discount Codes</h3></div>
+      <p>Before any restaurant booking or takeaway order — search "[restaurant name] discount code" or "[Deliveroo / Just Eat] voucher." Takes 30 seconds. Works more often than you think.</p>
+      <a href="https://www.vouchercodes.co.uk" class="card-link" target="_blank" rel="noopener noreferrer">Find codes →</a>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- BUDGET THAT WORKS -->
+<div id="budget" class="section">
+  <div class="section-label">Section 06</div>
+  <h2>Budget That Doesn't Ruin Your Life</h2>
+  <p class="sub">You don't need a spreadsheet. You need one rule and a bit of patience.</p>
+
+  <div class="truth-box">
+    <p>Most people aren't broke because they earn too little. They're broke because they spend it all the second it lands. The money was there. It just left immediately.</p>
+    <cite>— The real reason</cite>
+  </div>
+
+  <div class="cost-compare">
+    <div class="cost-bad">
+      <div class="label">❌ Broke Loop</div>
+      <div class="amount">£0</div>
+      <p>Paid Friday. Spent by Sunday. Begging by Wednesday.</p>
+    </div>
+    <div class="cost-good">
+      <div class="label">✅ Smart Loop</div>
+      <div class="amount">£200</div>
+      <p>Paid Friday. Moved £200 to savings immediately. Never saw it. Still there.</p>
+    </div>
+  </div>
+
+  <ul class="checklist">
+    <li>
+      <span class="icon">💸</span>
+      <div><strong>Pay yourself first</strong> The second you get paid — move a set amount to savings. Even £20. Before you buy anything. You will not miss what you never see.</div>
+    </li>
+    <li>
+      <span class="icon">📱</span>
+      <div><strong>Use a Monzo pot</strong> Monzo lets you separate money into pots — rent, food, fun. When the fun pot is gone, fun is done. No willpower needed. The system does it.</div>
+    </li>
+    <li>
+      <span class="icon">📋</span>
+      <div><strong>Know your three numbers</strong> Monthly income. Monthly fixed costs (rent, bills, phone). What's left. That's your real budget. Most people don't know their own numbers.</div>
+    </li>
+    <li>
+      <span class="icon">🔪</span>
+      <div><strong>Cut the subscriptions</strong> Check your bank statement right now. Count the subscriptions. Netflix, Spotify, Disney+, gym you don't use, apps you forgot. Cancel two today.</div>
+    </li>
+    <li>
+      <span class="icon">⚡</span>
+      <div><strong>Switch energy tariff every year</strong> Use USwitch or Compare the Market. Takes 20 minutes. Saves £100-300 a year. Most people never do it and just pay more forever.</div>
+    </li>
+    <li>
+      <span class="icon">📞</span>
+      <div><strong>Ring and threaten to cancel</strong> Sky, broadband, mobile — ring retention and say you're leaving. They will offer you a better deal 80% of the time. Every time. Takes 10 minutes.</div>
+    </li>
+  </ul>
+</div>
+
+<hr class="divider">
+
+<!-- PETS -->
+<div id="pets" class="section">
+  <div class="section-label">Section 07</div>
+  <h2>Your Pets Don't Have to Suffer Either</h2>
+  <p class="sub">Free vet care, free pet food. Ask. You'll be surprised.</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-top"><span class="card-emoji">🐾</span><h3>PDSA — Free Vet Care</h3></div>
+      <p>If you're on Universal Credit, Housing Benefit or Council Tax Reduction — PDSA provides free vet care for your pet. Vaccinations, treatment, operations. Completely free. Most people don't know this exists.</p>
+      <a href="https://www.pdsa.org.uk/getting-support/vet-and-care-costs/pdsa-pet-care-scheme" class="card-link" target="_blank" rel="noopener noreferrer">Check eligibility →</a>
+    </div>
+    <div class="card">
+      <div class="card-top"><span class="card-emoji">🥫</span><h3>Pet Food Banks</h3></div>
+      <p>Yes, pet food banks exist. Many food banks accept donations of pet food and give it out alongside human food. Some have dedicated pet food banks. Ring your nearest food bank and ask directly.</p>
+      <a href="https://www.trusselltrust.org/get-help/find-a-foodbank/" target="_blank" class="card-link" rel="noopener noreferrer">Find your food bank →</a>
+    </div>
+    <div class="card">
+      <div class="card-top"><span class="card-emoji">📱</span><h3>OLIO — Free Pet Supplies</h3></div>
+      <p>People regularly give away pet food, toys, beds, crates and supplies on OLIO — food their pet won't eat, leftover from pets that passed, excess stock. Check before you buy anything pet-related.</p>
+      <a href="https://olioapp.com/en/" class="card-link" target="_blank" rel="noopener noreferrer">Get OLIO →</a>
+    </div>
+  </div>
+
+  <div class="rule-box">
+    <strong>The Proud Person's Trap:</strong><br>
+    "I can't go to a food bank, I'm not that desperate." Meanwhile you're begging strangers online for £50 at 2am. The food bank is right there. The free vet care is right there. Pride costs more than it's worth. Go and get it.
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- LOAN REALITY CHECK -->
+<div class="section">
+  <div class="section-label">The Bottom Line</div>
+  <h2>Loans Are Not The Answer</h2>
+  <p class="sub">Never have been. Never will be. Here's why in one number.</p>
+
+  <div class="cost-compare">
+    <div class="cost-bad">
+      <div class="label">❌ £100 Payday Loan</div>
+      <div class="amount">£160+</div>
+      <p>What you pay back. £60 gone. For what? A temporary fix to a permanent problem.</p>
+    </div>
+    <div class="cost-good">
+      <div class="label">✅ This page</div>
+      <div class="amount">£0</div>
+      <p>Free grants, free food, free stuff, cashback, deals. No debt. No trap.</p>
+    </div>
+  </div>
+
+  <div style="text-align:center; margin-top: 24px;">
+    <a href="https://smallville1979.github.io/no-loans/" style="display:inline-block; background:var(--red); color:#fff; font-weight:800; font-size:15px; padding:14px 30px; border-radius:999px; text-decoration:none;">Why loans always make it worse →</a>
+  </div>
+</div>
+
+<!-- SHARE BAR -->
+<div class="share-bar">
+  <h3>Know someone stuck in the broke loop?</h3>
+  <p>Send them this. It's free. It might actually change things for them.</p>
+  <a href="https://wa.me/?text=This%20page%20changed%20how%20I%20think%20about%20money%20%F0%9F%A7%A0%20https%3A%2F%2Fsmallville1979.github.io%2Fsmart-broke%2F" class="share-btn" target="_blank" rel="noopener noreferrer">📲 Share on WhatsApp</a>
+</div>
+
+<!-- NETWORK -->
+<div style="padding: 24px 16px 12px; max-width:860px; margin:0 auto;">
+  <p style="font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--muted); margin-bottom:14px;">More free help</p>
+</div>
+<div class="network-grid">
+  <a href="https://smallville1979.github.io/free-stuff/" class="net-link"><span>🎁</span>Free Stuff</a>
+  <a href="https://smallville1979.github.io/emergency/" class="net-link"><span>🚨</span>Emergency Help</a>
+  <a href="https://smallville1979.github.io/no-loans/" class="net-link"><span>🚫</span>No Loans</a>
+  <a href="https://smallville1979.github.io/benefits-guide/" class="net-link"><span>💷</span>Benefits Guide</a>
+  <a href="https://smallville1979.github.io/need-food/" class="net-link"><span>🍎</span>Need Food</a>
+  <a href="https://smallville1979.github.io/break-the-cycle/" class="net-link"><span>🔄</span>Break The Cycle</a>
+</div>
+
+<script>
+// 48-hour impulse timer
+var timerInterval;
+var endTime;
+
+function startTimer() {
+  var btn = document.getElementById('timer-btn');
+  var msg = document.getElementById('timer-msg');
+
+  if (timerInterval) {
+    clearInterval(timerInterval);
+    timerInterval = null;
+    btn.textContent = 'Start My 48-Hour Wait';
+    document.getElementById('timer').textContent = '48:00:00';
+    msg.style.display = 'none';
+    return;
+  }
+
+  endTime = Date.now() + (48 * 60 * 60 * 1000);
+  btn.textContent = 'Reset Timer';
+  msg.style.display = 'block';
+
+  timerInterval = setInterval(function() {
+    var remaining = endTime - Date.now();
+    if (remaining <= 0) {
+      clearInterval(timerInterval);
+      document.getElementById('timer').textContent = '00:00:00';
+      msg.textContent = '✅ 48 hours done. Do you still actually want it?';
+      return;
+    }
+    var h = Math.floor(remaining / 3600000);
+    var m = Math.floor((remaining % 3600000) / 60000);
+    var s = Math.floor((remaining % 60000) / 1000);
+    document.getElementById('timer').textContent =
+      String(h).padStart(2,'0') + ':' +
+      String(m).padStart(2,'0') + ':' +
+      String(s).padStart(2,'0');
+  }, 1000);
+}
+</script>
+
+</body>
+</html>
